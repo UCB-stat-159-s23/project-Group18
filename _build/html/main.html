@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+
+
+<html >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Analysis of the Influence of Air Pollution and Other Factors on Human Health &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'main';</script>
+    <link rel="canonical" href="/user/mfong23//proxy/absolute/8000/main.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="None"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    <p class="title logo__title">My Jupyter Book</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Analysis of the Influence of Air Pollution and Other Factors on Human Health
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/main.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Analysis of the Influence of Air Pollution and Other Factors on Human Health</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-acquisition">Data Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-and-interpretation-of-plots">Exploratory Data Analysis and Interpretation of Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-over-time">Performance Over Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pollutants-vs-health">Pollutants vs. Health</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level">Relationship among Mental Health Test Performance, Stress, Mental Health Issue Occurrence, and Education Level</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions">Author Contributions</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="analysis-of-the-influence-of-air-pollution-and-other-factors-on-human-health">
+<h1>Analysis of the Influence of Air Pollution and Other Factors on Human Health<a class="headerlink" href="#analysis-of-the-influence-of-air-pollution-and-other-factors-on-human-health" title="Permalink to this headline">#</a></h1>
+<p>By Group 18: Peiying Guan, Yingyi Huang, Ye Joon Han, Michelle Fong</p>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Mental illness is a widespread health challenge which is one of the leading causes of illness and disability around the world. A lot of studies showed that mental issues are complex and multi-causal.</p>
+<p>In this project, we are going to examine the effects of various air pollutants(NO2, PM2.5, black carbon) on human mental health and wellbeing. In addition to air pollutants, we also want to see how other factors, including green space access and education level, affect people’s performance in Stroop test. A Stroop test measures a person’s cognitive function by assessing their attention capacity and processing abilities.</p>
+<p>Note: Code used to create figures is located in the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder.</p>
+</section>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">#</a></h2>
+<section id="data-acquisition">
+<h3>Data Acquisition<a class="headerlink" href="#data-acquisition" title="Permalink to this headline">#</a></h3>
+<p>The dataset contains the data collected for the Barcelona epidemiological research study within the framework of the CitieS-Health project. Data were collected from September 2020 to March 2021 in Barcelona, Spain. It can be accessed through <a class="reference external" href="https://www.kaggle.com/datasets/thedevastator/air-pollution-and-mental-health?resource=download">air pollution and mental health</a>.</p>
+</section>
+<section id="data-cleaning">
+<h3>Data Cleaning<a class="headerlink" href="#data-cleaning" title="Permalink to this headline">#</a></h3>
+<p>The original data contains 3348 rows and 95 columns. By selecting some variable that we are interested in and removing rows with missing values, we reduced the data to 2221 rows and 16 columns. Since the data was collected in Spain, we need to translate some Spanish contents into English.</p>
+</section>
+</section>
+<section id="exploratory-data-analysis-and-interpretation-of-plots">
+<h2>Exploratory Data Analysis and Interpretation of Plots<a class="headerlink" href="#exploratory-data-analysis-and-interpretation-of-plots" title="Permalink to this headline">#</a></h2>
+<section id="performance-over-time">
+<h3>Performance Over Time<a class="headerlink" href="#performance-over-time" title="Permalink to this headline">#</a></h3>
+<p>To examine and graph variables over time, we created a column called <code class="docutils literal notranslate"><span class="pre">datetime</span></code>, which combines year, month, and day into a pandas datetime object.</p>
+<p><img alt="plot1" src="_images/dates_performance.png" /></p>
+<p>Examining the distribution of dates, we see that most entries are from September 2020 to December 2020, with the remaining entries mostly from January 2021 to March 2021.</p>
+<p>Looking at the ID column, most individuals appear multiple times in the dataset. We took the 5 individuals with the most entries in the dataset and plotted their performance over time to see how performance generally varies per individual.</p>
+<p><img alt="plot2" src="_images/ind_performance.png" /></p>
+<p>Plotting performance by individuals over time, we notice that individuals are recorded over different periods of time. Performance tends to moves up and down quite a bit for each individual. Next, we quantify how much performance tends to range for individuals.</p>
+<p><img alt="plot3" src="_images/range_performance.png" /></p>
+<p>The graph above shows the distribution of the difference between the maximum and minimum performance score per individual - the range of performance range for individuals. The mean is around 20, which means that mental health performance does in fact range quite a bit for each individual on average.</p>
+<p>Finally, we plot the mean performance for all individuals over time and compare this with the N02 levels over time, a measure of air quality, to examine whether they tend to have the same trends over time.</p>
+<p><img alt="plot4" src="_images/mean_performance.png" /></p>
+<p>Plotting these two together, we see that it is possible that performance and pollution follow the same trends, but it is difficult to tell for sure with the ups and downs of both. This motivates further analysis of pollutants and environmental exposures in the next section.</p>
+</section>
+<section id="pollutants-vs-health">
+<h3>Pollutants vs. Health<a class="headerlink" href="#pollutants-vs-health" title="Permalink to this headline">#</a></h3>
+<p>We explored the pairwise relationships between environmental exposures(NO2, PM2.5, black carbon) and mental health measurement(stroop test performance, occurrence of mental issues, wellbeing, stress levels, sleep quality), but found no observable correlation among any pairs.
+<img alt="pairwise" src="_images/pollutants_vs_health.png" /></p>
+<p>We noted that the dots in the top three plots were very cluster. To reduce the effect of overplotting, we created three plots that showed the contours of the kernel density estimate for stroop test performance and air pollutants. Grouping by gender, we found that the contours of main plots from male and female were similar. Therefore, we further expanded the conclusions we made in pairwise plots that there was no correlation between air pollutants and stroop test performance.</p>
+<p><img alt="kde1" src="_images/no2_vs_performance.png" />
+<img alt="kde2" src="_images/pm25_vs_performance.png" />
+<img alt="kde3" src="_images/blackcarbon_vs_performance.png" /></p>
+</section>
+<section id="relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level">
+<h3>Relationship among Mental Health Test Performance, Stress, Mental Health Issue Occurrence, and Education Level<a class="headerlink" href="#relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level" title="Permalink to this headline">#</a></h3>
+<p>We first investigated how do the histogram distributions of mental health test performance, stress, mental health issue occurrence look like based on education levels, including university, baccalaureate, and primary or less. We observed that the distributions of those features for all education levels are overlapping with one another.</p>
+<p><img alt="hist1" src="_images/histogram_for_performance.png" />
+<img alt="hist2" src="_images/histogram_for_stress.png" />
+<img alt="hist3" src="_images/histogram_for_occurrence_mental.png" /></p>
+<p>We also looked into the relationship between education and mental health test performance, education and stress, and education and occurrence of mental health issue through bar plots. We observed that the baccalaureate degree group has the highest stress level and performance on the test, and primary or less education group has the lowest stress level and performance on the test. We also observed that the university degree group have the largest number of occurrence of mental health issue.</p>
+<p><img alt="bar1" src="_images/barplot_for_performanceVsEducation.png" />
+<img alt="bar2" src="_images/barplot_for_stressVsEducation.png" />
+<img alt="bar3" src="_images/barplot_for_occurrenceVsEducation.png" /></p>
+<p>Moreover, we looked into the relationship among stress, mental health issue occurrence, and performance through scatter plot. We observed somewhat negative relationship between the stress and the performance on test, and somewhat positive relationship between occurrence of mental health issue and the performance, and the relationship does not seem to vary based on the education level.</p>
+<p><img alt="scatter1" src="_images/scatterplot_for_stressVsperformance.png" />
+<img alt="scatter2" src="_images/scatterplot_for_occurrenceVsperformance.png" /></p>
+<p>Based on the histogram distributions, we established a null hypothesis that states that there would be no difference in the average performance, average stress level, and average occurrence of mental health issue between people with university and people with baccalaureate, people with university and people with primary or less education background, and people with baccalaureate and people with primary or less education background, and alternative hypothesis is that there would be a difference. Since our null hypothesis assumes that education has nothing do with mental health, we decided to perform A/B testing because if the null hypothesis is true, the difference in average performance, stress level, and occurrence of mental health issue would be just 0 regardless of the education level. Using the 0.05 as a significance level, we were able to reject the null hypothesis that there is no difference in average occurrence of mental health issue between people with university degree and people with baccalaureate. However, we failed to reject the null hypotheses that there is no difference in average occurrence between people with university degree and people with primary or less education background, and also same for people with baccalaureate and people with primary or less education. We failed to reject the null hypotheses that there is no difference in average stress level for people with university, baccalaureate, and primary or less education. On the other hand, we rejected the null hypotheses that there is no difference in average performance for people with those education backgrounds.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>Based on our exploratory analysis of air pollutants, education, and Stroop test performance, we found that there is no correlation between air pollutants and Stroop test performance and between mental health occurrences and education. There is some correlation between average performance and education background, and further work could explore this in more detail.</p>
+</section>
+<section id="author-contributions">
+<h2>Author Contributions<a class="headerlink" href="#author-contributions" title="Permalink to this headline">#</a></h2>
+<p><strong>Peiying Guan</strong></p>
+<ol class="arabic simple">
+<li><p>Performed data cleaning(<code class="docutils literal notranslate"><span class="pre">DataCleaning.ipynb</span></code>) and import <code class="docutils literal notranslate"><span class="pre">data</span></code></p></li>
+<li><p>Analyzed the effects of air pollutants on human health(<code class="docutils literal notranslate"><span class="pre">PollutantsVsWellbeing.ipynb</span></code>)</p></li>
+<li><p>Contributed parts of <code class="docutils literal notranslate"><span class="pre">main.ipynb</span></code>, including introduction, data, and some in EDA</p></li>
+</ol>
+<p><strong>Ye Joon Han</strong></p>
+<ol class="arabic simple">
+<li><p>Analyzed the relationship among mental health test performance, stress, occurrence of mental health issue, and education through data visualization and hypothesis testing (<code class="docutils literal notranslate"><span class="pre">MentalHealthVsEducation.ipynb</span></code>)</p></li>
+<li><p>Contributed to <code class="docutils literal notranslate"><span class="pre">main.ipynb</span></code> by including Exploratory Data Analysis and the justification and details of the hypothesis testing.</p></li>
+<li><p>Created Makefile with “env” and “all” targets.</p></li>
+<li><p>Included <code class="docutils literal notranslate"><span class="pre">LICENSE.md</span></code>.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data">Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-acquisition">Data Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">Data Cleaning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploratory-data-analysis-and-interpretation-of-plots">Exploratory Data Analysis and Interpretation of Plots</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-over-time">Performance Over Time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pollutants-vs-health">Pollutants vs. Health</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level">Relationship among Mental Health Test Performance, Stress, Mental Health Issue Occurrence, and Education Level</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions">Author Contributions</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
