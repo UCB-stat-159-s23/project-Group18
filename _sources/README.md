@@ -5,4 +5,6 @@ project-project-group18 created by GitHub Classroom
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s23/project-Group18.git/HEAD?labpath=main.ipynb)
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-s23/project-Group18.git/HEAD?labpath=main.ipynb)
+
 Link: [https://ucb-stat-159-s23.github.io/project-Group18/main.html](https://ucb-stat-159-s23.github.io/project-Group18/)
