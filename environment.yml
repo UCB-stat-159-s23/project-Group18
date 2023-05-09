@@ -1,0 +1,14 @@
+name: final_proj
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - seaborn
+  - ipykernel
+  - python==3.9
+  - scipy
+  - scikit-learn
+  - matplotlib
+prefix: /home/jovyan/envs/final_proj
