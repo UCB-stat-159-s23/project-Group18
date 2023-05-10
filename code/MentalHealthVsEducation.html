@@ -380,256 +380,85 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/CitieSHealth_BCN_DATA_PanelStudy_20220414_Clean.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">data</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
+<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>no2</th>
-      <th>pm25</th>
-      <th>black carbon</th>
-      <th>performance</th>
-      <th>occurrence_mental</th>
-      <th>wellbeing</th>
-      <th>stress</th>
-      <th>sleep quality</th>
-      <th>gender</th>
-      <th>diet</th>
-      <th>alcohol</th>
-      <th>drug_use</th>
-      <th>education</th>
-      <th>access_greenbluespaces</th>
-      <th>smoke</th>
-      <th>age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>28.54</td>
-      <td>8.16</td>
-      <td>0.50</td>
-      <td>51.24</td>
-      <td>2</td>
-      <td>8</td>
-      <td>5</td>
-      <td>8</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>44.51</td>
-      <td>13.38</td>
-      <td>1.51</td>
-      <td>56.01</td>
-      <td>10</td>
-      <td>9</td>
-      <td>8</td>
-      <td>9</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>28</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>33.81</td>
-      <td>16.53</td>
-      <td>1.17</td>
-      <td>58.18</td>
-      <td>14</td>
-      <td>3</td>
-      <td>5</td>
-      <td>2</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>37.86</td>
-      <td>15.67</td>
-      <td>1.21</td>
-      <td>71.48</td>
-      <td>12</td>
-      <td>9</td>
-      <td>6</td>
-      <td>2</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>33</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>37.82</td>
-      <td>18.45</td>
-      <td>1.56</td>
-      <td>46.05</td>
-      <td>9</td>
-      <td>3</td>
-      <td>5</td>
-      <td>10</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>baccalaureate</td>
-      <td>No</td>
-      <td>No</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>2211</th>
-      <td>33.99</td>
-      <td>13.17</td>
-      <td>1.19</td>
-      <td>61.69</td>
-      <td>13</td>
-      <td>7</td>
-      <td>2</td>
-      <td>8</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>2212</th>
-      <td>49.05</td>
-      <td>21.90</td>
-      <td>1.78</td>
-      <td>29.86</td>
-      <td>1</td>
-      <td>8</td>
-      <td>10</td>
-      <td>7</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>2213</th>
-      <td>17.82</td>
-      <td>11.52</td>
-      <td>0.44</td>
-      <td>67.36</td>
-      <td>12</td>
-      <td>7</td>
-      <td>1</td>
-      <td>7</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>31</td>
-    </tr>
-    <tr>
-      <th>2214</th>
-      <td>34.85</td>
-      <td>13.70</td>
-      <td>0.83</td>
-      <td>56.75</td>
-      <td>8</td>
-      <td>7</td>
-      <td>5</td>
-      <td>9</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>39</td>
-    </tr>
-    <tr>
-      <th>2215</th>
-      <td>28.41</td>
-      <td>10.10</td>
-      <td>1.02</td>
-      <td>36.10</td>
-      <td>5</td>
-      <td>8</td>
-      <td>9</td>
-      <td>7</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>university</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>46</td>
-    </tr>
-  </tbody>
-</table>
-<p>2216 rows × 16 columns</p>
-</div></div></div>
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
+<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/io/parsers/readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File /srv/conda/envs/notebook/lib/python3.10/site-packages/pandas/io/common.py:856,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">851</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">852</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">854</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">856</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">857</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">858</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">859</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">862</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">863</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">864</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;data/CitieSHealth_BCN_DATA_PanelStudy_20220414_Clean.csv&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -638,9 +467,6 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/histogram_for_performance&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/03b3f45f1f0bfb68cfe98380950edc4c29a892d9609d1210302d2780813afec7.png" src="../_images/03b3f45f1f0bfb68cfe98380950edc4c29a892d9609d1210302d2780813afec7.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -651,9 +477,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/c2dec1c1abc3a5fc30afe978572efa3e063f49681a13ceea18fb86ccf29cbd71.png" src="../_images/c2dec1c1abc3a5fc30afe978572efa3e063f49681a13ceea18fb86ccf29cbd71.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -662,9 +485,6 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/histogram_for_stress&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/67bd069716d9facdedc14c236e3d06fe1ba5d6a764c6138654c2e2ce9d641338.png" src="../_images/67bd069716d9facdedc14c236e3d06fe1ba5d6a764c6138654c2e2ce9d641338.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -675,9 +495,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/97d424cd5291a79a848c22b3a5bf01fe0ae3d4db81c0f6c9738a225c9bbf458a.png" src="../_images/97d424cd5291a79a848c22b3a5bf01fe0ae3d4db81c0f6c9738a225c9bbf458a.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -686,9 +503,6 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/barplot_for_occurrenceVsEducation&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/b1becc7db89f6a151ade60b2145996f350760468d05be19aeb56e10c06b4be8e.png" src="../_images/b1becc7db89f6a151ade60b2145996f350760468d05be19aeb56e10c06b4be8e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -699,9 +513,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/d72bca976614c75f7240f0a5bfb02f8b8e7379502e25b024ab8f8586fbd1c1f3.png" src="../_images/d72bca976614c75f7240f0a5bfb02f8b8e7379502e25b024ab8f8586fbd1c1f3.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -711,9 +522,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/20b0db914253e66b040dc0334c4763982c08d266d94a49e47b1bc7b349624987.png" src="../_images/20b0db914253e66b040dc0334c4763982c08d266d94a49e47b1bc7b349624987.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -722,9 +530,6 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/scatterplot_for_occurrenceVsperformance&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/c123be994870f89a197c5fef3c4afc68b4e0263f229f1925662b5039ab9097b5.png" src="../_images/c123be994870f89a197c5fef3c4afc68b4e0263f229f1925662b5039ab9097b5.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -736,13 +541,6 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Mental Health Issue Occurence for people with University education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_mental_health_issue_occurence_univ</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Mental Health Issue Occurence for people with Baccalaureate education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_mental_health_issue_occurence_bac</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Mental Health Issue Occurence for people with Primary or less education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_mental_health_issue_occurence_pri_less</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Mental Health Issue Occurence for people with University education is 6.847
-Average Mental Health Issue Occurence for people with Baccalaureate education is 6.034
-Average Mental Health Issue Occurence for people with Primary or less education is 6.214
 </pre></div>
 </div>
 </div>
@@ -759,13 +557,6 @@ Average Mental Health Issue Occurence for people with Primary or less education 
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Stress Level for people with University education is 4.185
-Average Stress Level for people with Baccalaureate education is 4.285
-Average Stress Level for people with Primary or less education is 3.738
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -776,13 +567,6 @@ Average Stress Level for people with Primary or less education is 3.738
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Stroop Test score for people with University education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_performance_univ</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Stroop Test score for people with Baccalaureate education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_performance_bac</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average Stroop Test score for people with Primary or less education is </span><span class="si">{:0.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average_performance_pri_less</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Stroop Test score for people with University education is 47.408
-Average Stroop Test score for people with Baccalaureate education is 50.281
-Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
@@ -813,21 +597,11 @@ Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.001. Thus, Reject the Null Hypothesis
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">average_mental_health_issue_occurence_univ</span> <span class="o">-</span> <span class="n">average_mental_health_issue_occurence_pri_less</span><span class="p">)</span>
 <span class="n">hypothesis_testing</span><span class="p">(</span><span class="s1">&#39;university&#39;</span><span class="p">,</span> <span class="s1">&#39;primary or less&#39;</span><span class="p">,</span> <span class="s1">&#39;occurrence_mental&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">observed_diff</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.279. Thus, Fail to Rejct the Null Hypothesis
 </pre></div>
 </div>
 </div>
@@ -839,21 +613,11 @@ Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.770. Thus, Fail to Rejct the Null Hypothesis
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">average_stress_univ</span> <span class="o">-</span> <span class="n">average_stress_bac</span><span class="p">)</span>
 <span class="n">hypothesis_testing</span><span class="p">(</span><span class="s1">&#39;university&#39;</span><span class="p">,</span> <span class="s1">&#39;baccalaureate&#39;</span><span class="p">,</span> <span class="s1">&#39;stress&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">observed_diff</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.526. Thus, Fail to Rejct the Null Hypothesis
 </pre></div>
 </div>
 </div>
@@ -865,21 +629,11 @@ Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.255. Thus, Fail to Rejct the Null Hypothesis
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">average_stress_pri_less</span> <span class="o">-</span> <span class="n">average_stress_bac</span><span class="p">)</span>
 <span class="n">hypothesis_testing</span><span class="p">(</span><span class="s1">&#39;primary or less&#39;</span><span class="p">,</span> <span class="s1">&#39;baccalaureate&#39;</span><span class="p">,</span> <span class="s1">&#39;stress&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">observed_diff</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.183. Thus, Fail to Rejct the Null Hypothesis
 </pre></div>
 </div>
 </div>
@@ -891,11 +645,6 @@ Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.000. Thus, Reject the Null Hypothesis
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -904,21 +653,11 @@ Average Stroop Test score for people with Primary or less education is 39.928
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.000. Thus, Reject the Null Hypothesis
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">observed_diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">average_performance_bac</span> <span class="o">-</span> <span class="n">average_performance_pri_less</span><span class="p">)</span>
 <span class="n">hypothesis_testing</span><span class="p">(</span><span class="s1">&#39;baccalaureate&#39;</span><span class="p">,</span> <span class="s1">&#39;primary or less&#39;</span><span class="p">,</span> <span class="s1">&#39;performance&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">observed_diff</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P value is 0.000. Thus, Reject the Null Hypothesis
 </pre></div>
 </div>
 </div>

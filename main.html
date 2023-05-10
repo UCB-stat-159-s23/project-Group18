@@ -367,6 +367,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-over-time">Performance Over Time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pollutants-vs-health">Pollutants vs. Health</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level">Relationship among Mental Health Test Performance, Stress, Mental Health Issue Occurrence, and Education Level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-conditions-and-acess-to-green-spaces">Relationship among Mental Health conditions and acess to green spaces</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
@@ -441,6 +442,17 @@ document.write(`
 <p><img alt="scatter1" src="_images/scatterplot_for_stressVsperformance.png" />
 <img alt="scatter2" src="_images/scatterplot_for_occurrenceVsperformance.png" /></p>
 <p>Based on the histogram distributions, we established a null hypothesis that states that there would be no difference in the average performance, average stress level, and average occurrence of mental health issue between people with university and people with baccalaureate, people with university and people with primary or less education background, and people with baccalaureate and people with primary or less education background, and alternative hypothesis is that there would be a difference. Since our null hypothesis assumes that education has nothing do with mental health, we decided to perform A/B testing because if the null hypothesis is true, the difference in average performance, stress level, and occurrence of mental health issue would be just 0 regardless of the education level. Using the 0.05 as a significance level, we were able to reject the null hypothesis that there is no difference in average occurrence of mental health issue between people with university degree and people with baccalaureate. However, we failed to reject the null hypotheses that there is no difference in average occurrence between people with university degree and people with primary or less education background, and also same for people with baccalaureate and people with primary or less education. We failed to reject the null hypotheses that there is no difference in average stress level for people with university, baccalaureate, and primary or less education. On the other hand, we rejected the null hypotheses that there is no difference in average performance for people with those education backgrounds.</p>
+</section>
+<section id="relationship-among-mental-health-conditions-and-acess-to-green-spaces">
+<h3>Relationship among Mental Health conditions and acess to green spaces<a class="headerlink" href="#relationship-among-mental-health-conditions-and-acess-to-green-spaces" title="Permalink to this heading">#</a></h3>
+<p>We then explore the relation between green space access with different health conditions (stress, sleep, outdoor time, etc). The pairplot is as below.
+<img alt="pairwise" src="_images/relation_btw_health_and_green.png" /></p>
+<p>We could see that green space aceess doesn’t seem to have relationship with performance, tress_level, enery_level, sleep_quality, and outdoor time. We zoom in each and plot the density for different health conditions with different green space access.</p>
+<p><img alt="scatter1" src="_images/hist_of_energy_level.png" />
+<img alt="scatter1" src="_images/hist_of_outdoor_time.png" />
+<img alt="scatter1" src="_images/hist_of_sleep_quality.png" />
+<img alt="scatter1" src="_images/hist_of_stress_level.png" /></p>
+<p>From the plots we see that health conditions don’t have relationship with green space access.</p>
 </section>
 </section>
 <section id="conclusion">
@@ -541,6 +553,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-over-time">Performance Over Time</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pollutants-vs-health">Pollutants vs. Health</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-test-performance-stress-mental-health-issue-occurrence-and-education-level">Relationship among Mental Health Test Performance, Stress, Mental Health Issue Occurrence, and Education Level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-conditions-and-acess-to-green-spaces">Relationship among Mental Health conditions and acess to green spaces</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
