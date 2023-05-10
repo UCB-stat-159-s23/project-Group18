@@ -6,4 +6,4 @@ root: main
 parts:
   - caption: Analysis Notebooks
     chapters:
-      - file: DataCleaning
+      - file: code/DataCleaning
