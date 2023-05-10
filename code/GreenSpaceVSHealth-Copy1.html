@@ -375,7 +375,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
-<span class="n">health</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/CitieSHealth_BCN_DATA_PanelStudy_20220414.csv&#39;</span><span class="p">)</span>
+<span class="n">health</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/CitieSHealth_BCN_DATA_PanelStudy_20220414.csv&#39;</span><span class="p">)</span>
 <span class="n">health</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -663,9 +663,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_318/2555465821.py:9: FutureWarning: Index.__or__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__or__.  Use index.union(other) instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_9643/101148290.py:9: FutureWarning: Index.__or__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__or__.  Use index.union(other) instead.
   numerical = list((health_clean.dtypes[health_clean.dtypes == &#39;float64&#39;].index) | (health_clean.dtypes[health_clean.dtypes == &#39;int64&#39;].index))
-/tmp/ipykernel_318/2555465821.py:10: FutureWarning: Index.__and__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__and__.  Use index.intersection(other) instead.
+/tmp/ipykernel_9643/101148290.py:10: FutureWarning: Index.__and__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__and__.  Use index.intersection(other) instead.
   categorical = list((health_clean.dtypes[health_clean.dtypes != &#39;float64&#39;].index) &amp; (health_clean.dtypes[health_clean.dtypes != &#39;int64&#39;].index))
 </pre></div>
 </div>
@@ -754,7 +754,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">one_hot_health_clean</span><span class="p">,</span> <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;access_greenblue_spaces_Yes&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/relation_btw_health_and_green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/relation_btw_health_and_green&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -765,7 +765,7 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">health_clean</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;performance&#39;</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;access_greenblue_spaces&#39;</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/performance vs green_access&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/performance vs green_access&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -781,7 +781,7 @@ document.write(`
              <span class="n">kde</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
              <span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> 
              <span class="n">common_norm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/hist_of_stress_level&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/hist_of_stress_level&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -797,7 +797,7 @@ document.write(`
              <span class="n">kde</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
              <span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> 
              <span class="n">common_norm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>	
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/hist_of_energy_level&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/hist_of_energy_level&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -813,7 +813,7 @@ document.write(`
              <span class="n">kde</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
              <span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> 
              <span class="n">common_norm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/hist_of_sleep_quality&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/hist_of_sleep_quality&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -829,7 +829,7 @@ document.write(`
              <span class="n">kde</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
              <span class="n">stat</span> <span class="o">=</span> <span class="s2">&quot;density&quot;</span><span class="p">,</span> 
              <span class="n">common_norm</span> <span class="o">=</span> <span class="kc">False</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;outputs/hist_of_outdoor_time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;../outputs/hist_of_outdoor_time&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

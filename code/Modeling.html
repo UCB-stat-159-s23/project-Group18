@@ -547,9 +547,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_371/2314732951.py:1: FutureWarning: Index.__or__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__or__.  Use index.union(other) instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3750/2314732951.py:1: FutureWarning: Index.__or__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__or__.  Use index.union(other) instead.
   numerical = list((df.dtypes[df.dtypes == &#39;float64&#39;].index) | (df.dtypes[df.dtypes == &#39;int64&#39;].index))
-/tmp/ipykernel_371/2314732951.py:2: FutureWarning: Index.__and__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__and__.  Use index.intersection(other) instead.
+/tmp/ipykernel_3750/2314732951.py:2: FutureWarning: Index.__and__ operating as a set operation is deprecated, in the future this will be a logical operation matching Series.__and__.  Use index.intersection(other) instead.
   categorical = list((df.dtypes[df.dtypes != &#39;float64&#39;].index) &amp; (df.dtypes[df.dtypes != &#39;int64&#39;].index))
 </pre></div>
 </div>
@@ -576,172 +576,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>age</th>
-      <th>black carbon</th>
-      <th>no2</th>
-      <th>occurrence_mental</th>
-      <th>performance</th>
-      <th>pm25</th>
-      <th>sleep quality</th>
-      <th>stress</th>
-      <th>wellbeing</th>
-      <th>gender_Female</th>
-      <th>...</th>
-      <th>alcohol_Yes</th>
-      <th>drug_use_No</th>
-      <th>drug_use_Yes</th>
-      <th>education_baccalaureate</th>
-      <th>education_primary or less</th>
-      <th>education_university</th>
-      <th>access_greenbluespaces_No</th>
-      <th>access_greenbluespaces_Yes</th>
-      <th>smoke_No</th>
-      <th>smoke_Yes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>37</td>
-      <td>0.50</td>
-      <td>28.54</td>
-      <td>2</td>
-      <td>51.24</td>
-      <td>8.16</td>
-      <td>8</td>
-      <td>5</td>
-      <td>8</td>
-      <td>1</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>28</td>
-      <td>1.51</td>
-      <td>44.51</td>
-      <td>10</td>
-      <td>56.01</td>
-      <td>13.38</td>
-      <td>9</td>
-      <td>8</td>
-      <td>9</td>
-      <td>1</td>
-      <td>...</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>29</td>
-      <td>1.17</td>
-      <td>33.81</td>
-      <td>14</td>
-      <td>58.18</td>
-      <td>16.53</td>
-      <td>2</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>33</td>
-      <td>1.21</td>
-      <td>37.86</td>
-      <td>12</td>
-      <td>71.48</td>
-      <td>15.67</td>
-      <td>2</td>
-      <td>6</td>
-      <td>9</td>
-      <td>1</td>
-      <td>...</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>45</td>
-      <td>1.56</td>
-      <td>37.82</td>
-      <td>9</td>
-      <td>46.05</td>
-      <td>18.45</td>
-      <td>10</td>
-      <td>5</td>
-      <td>3</td>
-      <td>1</td>
-      <td>...</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 24 columns</p>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2216, 24)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
