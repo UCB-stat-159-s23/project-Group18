@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'code/Modeling';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="MentalHealthVsEducation.html" />
+    <link rel="prev" title="Education and Performance" href="MentalHealthVsEducation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,8 +159,11 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="DataCleaning.html">Data Cleaning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="PerformanceOverTime.html">Performance Over Time</a></li>
-<li class="toctree-l1"><a class="reference internal" href="PollutantsVsWellbeing.html">Explore the relationship between environmental factors and human health</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PollutantsVsWellbeing.html">Pollutants and Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MentalHealthVsEducation.html">Education and Performance</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Predicting Mental Health Performance</a></li>
+
+
 </ul>
 
     </div>
@@ -354,9 +357,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Predicting Mental Health Performance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
 </ul>
+
             </nav>
         </div>
     </div>
@@ -367,7 +372,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="predicting-mental-health-performance">
+  <section id="predicting-mental-health-performance">
 <h1>Predicting Mental Health Performance<a class="headerlink" href="#predicting-mental-health-performance" title="Permalink to this heading">#</a></h1>
 <p>We create models to predict mental health performance using other features.</p>
 <div class="cell docutils container">
@@ -753,8 +758,9 @@ document.write(`
 </div>
 </div>
 </div>
+</section>
 <section id="linear-regression">
-<h2>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this heading">#</a></h2>
+<h1>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
@@ -802,7 +808,7 @@ Model score :  0.28852599872359175
 </div>
 </section>
 <section id="random-forest">
-<h2>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h2>
+<h1>Random Forest<a class="headerlink" href="#random-forest" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">max_depth</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -835,7 +841,6 @@ Model score :  0.28852599872359175
 <img alt="../_images/4336402ca0ffc1ac6d0e25825a2c58c71dce875142782af54174a8aa0d73ccde.png" src="../_images/4336402ca0ffc1ac6d0e25825a2c58c71dce875142782af54174a8aa0d73ccde.png" />
 </div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -875,7 +880,7 @@ Model score :  0.28852599872359175
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Education and Performance</p>
       </div>
     </a>
 </div></div>
@@ -896,9 +901,11 @@ Model score :  0.28852599872359175
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Predicting Mental Health Performance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression">Linear Regression</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#random-forest">Random Forest</a></li>
 </ul>
+
   </nav></div>
 
 </div></div>
