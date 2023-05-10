@@ -1,0 +1,17 @@
+**Peiying Guan**
+1. Performed data cleaning(`DataCleaning.ipynb`) and import `data`
+2. Analyzed the effects of air pollutants on human health(`PollutantsVsWellbeing.ipynb`)
+3. Contributed parts of `main.ipynb`, including introduction, data, and some in EDA
+4. Created a virtual environment to run all code(`environment.yml`)
+5. Included useful information in `README.md`
+
+**Ye Joon Han**
+1. Analyzed the relationship among mental health test performance, stress, occurrence of mental health issue, and education through data visualization and hypothesis testing (`MentalHealthVsEducation.ipynb`)
+2. Contributed to `main.ipynb` by including Exploratory Data Analysis and the justification and details of the hypothesis testing.
+3. Created Makefile with "env" and "all" targets.
+4. Included `LICENSE.md`.
+
+**Michelle Fong**
+1. Analyzed performance over time (`PerformanceOverTime.ipynb`)
+2. Contributed to `main.ipynb` by including graphs and explanation.
+3. Created JupyterBook and continuous integration.
