@@ -4,7 +4,7 @@
 format: jb-book
 root: main
 parts:
-  - caption: Analysis Notebooks
+  - caption: Code Notebooks
     chapters:
       - file: code/DataCleaning
       - file: code/PerformanceOverTime
