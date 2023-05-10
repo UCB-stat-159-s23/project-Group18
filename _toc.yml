@@ -3,3 +3,7 @@
 
 format: jb-book
 root: main.ipynb
+parts: 
+- caption: Analysis Notebooks
+    chapters:
+    - file: code/DataCleaning.ipynb
