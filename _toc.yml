@@ -3,5 +3,7 @@
 
 format: jb-book
 root: main
-chapters:
-- file: DataCleaning
+parts:
+  - caption: Analysis Notebooks
+    chapters:
+      - file: DataCleaning
