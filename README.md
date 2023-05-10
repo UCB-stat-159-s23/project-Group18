@@ -10,7 +10,7 @@ Access to Original Data:[kaggle](https://www.kaggle.com/datasets/thedevastator/a
 
 In this project, we are going to examine the effects of various air pollutants(NO2, PM2.5, black carbon) on human mental health and wellbeing. In addition to air pollutants, we also want to see how other factors, including green space access and education level, affect people's performance in Stroop test. A Stroop test measures a person's cognitive function by assessing their attention capacity and processing abilities. The summary the of analysis can be found in `main.ipynb`, and more detailed analysis with code was stored in `code`.
 
-**Some helpful Tips**
+**Some Helpful Tips**
 
 * Use command `conda env create -f environment.yml` to create new environment for this project
 * Install `tools` packages before running any code in notebooks
