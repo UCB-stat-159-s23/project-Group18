@@ -15,3 +15,9 @@
 1. Analyzed performance over time (`PerformanceOverTime.ipynb`)
 2. Contributed to `main.ipynb` by including graphs and explanation.
 3. Created JupyterBook and continuous integration.
+
+**Yingyi Huang**
+1. Analyzed the correlation between green space access and different health conditions (`GreenSpaceVSHealth.ipynb`)
+2. Created functionality (`utils.py`)
+3. Added tests for functions.
+4. Contributed to `main.ipynb` by including graphs and explanation.
