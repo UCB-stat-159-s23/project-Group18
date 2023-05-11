@@ -8,7 +8,7 @@
 **Ye Joon Han**
 1. Analyzed the relationship among mental health test performance, stress, occurrence of mental health issue, and education through data visualization and hypothesis testing (`MentalHealthVsEducation.ipynb`)
 2. Contributed to `main.ipynb` by including Exploratory Data Analysis and the justification and details of the hypothesis testing.
-3. Created Makefile with "env", "all", "html" targets.
+3. Created Makefile.
 4. Included `LICENSE.md`.
 
 **Michelle Fong**
