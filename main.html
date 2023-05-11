@@ -401,6 +401,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-conditions-and-acess-to-green-spaces">Relationship among Mental Health conditions and acess to green spaces</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions">Author Contributions</a></li>
 </ul>
@@ -421,7 +422,7 @@ document.write(`
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Mental illness is a widespread health challenge which is one of the leading causes of illness and disability around the world. A lot of studies showed that mental issues are complex and multi-causal.</p>
 <p>In this project, we are going to examine the effects of various air pollutants(NO2, PM2.5, black carbon) on human mental health and wellbeing. In addition to air pollutants, we also want to see how other factors, including green space access and education level, affect people’s performance in Stroop test. A Stroop test measures a person’s cognitive function by assessing their attention capacity and processing abilities.</p>
-<p>Note: Code used to create figures is located in the <code class="docutils literal notranslate"><span class="pre">code</span></code> folder.</p>
+<p>Note: Code used to create figures is located in the code notebooks.</p>
 </section>
 <section id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">#</a></h2>
@@ -486,9 +487,17 @@ document.write(`
 <p>From the plots we see that health conditions don’t have relationship with green space access.</p>
 </section>
 </section>
+<section id="modeling">
+<h2>Modeling<a class="headerlink" href="#modeling" title="Permalink to this heading">#</a></h2>
+<p>In addition to analyzing the individual relationships between variables above, we also want to examine how well all factors (pollutants, sleep quality, stress, drug use, education, etc.) can predict performance on a Stroop test. Creating a prediction model can be useful in identifying individuals that may require additional support without having to go out of their way to take the Stroop test.</p>
+<p>First, we created a linear regression model with <code class="docutils literal notranslate"><span class="pre">performance</span></code> as the outcome variable and the rest of the columns as explanatory variables. This model performed decently well on a test set after being trained on a training set, with a normalized root mean squared error of 0.1082. Linear regression has various assumptions, including linearity between the outcome and explanatory variables, independence, homoscedasticity, no multicollinearity, and no outliers.</p>
+<p>To see if we could produce a better model without assumptions, we created a random forest model, a nonparametric model that uses a collection of decision trees to make more accurate predictions. This model performed slightly better on a test set after being trained on a training set, with a normalized root mean squared error of 0.1069.</p>
+<p>With the characteristics of individuals in the dataset, we can predict performance pretty well with these two models. These could be helpful to identify individuals that may perform poorly on Stroop test.</p>
+</section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>Based on our exploratory analysis of air pollutants, education, and Stroop test performance, we found that there is no correlation between air pollutants and Stroop test performance and between mental health occurrences and education. There is some correlation between average performance and education background, and further work could explore this in more detail.</p>
+<p>Based on our exploratory analysis of air pollutants, education, and Stroop test performance, we found that there is no correlation between air pollutants and Stroop test performance, between mental health occurrences and education, and between access to green space and health conditions. There is some correlation between average performance and education background, and further work could explore this in more detail.</p>
+<p>Examining the variables altogether to predict performance on a Stroop test, our linear regression model and random forest model both performed decently well on a test set. Future work could include exploring the causal effect of each explanatory variable on performance and determining which variable has the largest causal effect on performance. Knowing this could identify characteristics that have the biggest impact on cognitive function and can help identify ways in which individuals can change their lifestyle to improve mental performance. Since this data is from Barcelona, further research could also take data from other cities and conduct similar analyses.</p>
 </section>
 <section id="author-contributions">
 <h2>Author Contributions<a class="headerlink" href="#author-contributions" title="Permalink to this heading">#</a></h2>
@@ -510,6 +519,7 @@ document.write(`
 <p><strong>Michelle Fong</strong></p>
 <ol class="arabic simple">
 <li><p>Analyzed performance over time (<code class="docutils literal notranslate"><span class="pre">PerformanceOverTime.ipynb</span></code>)</p></li>
+<li><p>Created models (<code class="docutils literal notranslate"><span class="pre">Modeling.ipynb</span></code>)</p></li>
 <li><p>Contributed to <code class="docutils literal notranslate"><span class="pre">main.ipynb</span></code> by including graphs and explanation.</p></li>
 <li><p>Created JupyterBook and continuous integration.</p></li>
 </ol>
@@ -589,6 +599,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-among-mental-health-conditions-and-acess-to-green-spaces">Relationship among Mental Health conditions and acess to green spaces</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modeling">Modeling</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#author-contributions">Author Contributions</a></li>
 </ul>
