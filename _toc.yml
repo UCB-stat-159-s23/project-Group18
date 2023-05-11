@@ -10,5 +10,5 @@ parts:
       - file: code/PerformanceOverTime
       - file: code/PollutantsVsWellbeing
       - file: code/MentalHealthVsEducation
-      - file: code/GreenSpaceVSHeatlh
+      - file: code/GreenSpaceVSHealth
       - file: code/Modeling

@@ -13,8 +13,9 @@
 
 **Michelle Fong**
 1. Analyzed performance over time (`PerformanceOverTime.ipynb`)
-2. Contributed to `main.ipynb` by including graphs and explanation.
-3. Created JupyterBook and continuous integration.
+2. Created models (`Modeling.ipynb`)
+3. Contributed to `main.ipynb` by including graphs and explanation.
+4. Created JupyterBook and continuous integration.
 
 **Yingyi Huang**
 1. Analyzed the correlation between green space access and different health conditions (`GreenSpaceVSHealth.ipynb`)
